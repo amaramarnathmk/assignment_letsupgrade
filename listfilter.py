@@ -1,0 +1,6 @@
+li=list(range(1,10))
+print(li)
+re3 = list(filter(lambda n: (n % 3 == 0), li))
+re5 = list(filter(lambda n: (n % 5 == 0), li))
+print("divisible by 3",re3)
+print("divisible by 5",re5)
