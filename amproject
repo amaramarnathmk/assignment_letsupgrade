@@ -1,0 +1,23 @@
+import mysql.connector as con
+db = con.connect(host = "localhost", user = "root", passwd = "system", database = 'mydb')
+
+cur = db.cursor()
+
+cur.execute("update emp set age = 60 where name = 'amar'")
+cur.execute("select * from emp")
+
+for i in cur:
+    print(i)
+
+cur.close()
+db.commit()
+
+
+
+create database mydb;
+use mydb;
+create table emp(emp_id int, name varchar(20), age int);
+
+insert into emp values(101, 'amar', 87);
+insert into emp values(102, 'Athul', 92);
+select * from emp;
